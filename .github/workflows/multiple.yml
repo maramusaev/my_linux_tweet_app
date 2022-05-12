@@ -24,7 +24,7 @@ jobs:
         env:
           IMAGE_NAME: linux_tweet_app
           PROJECT_ID: service-project-ardhan-1
-        uses: google-github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@v0.3.0
         with:
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
           project_id: ${{ env.PROJECT_ID }}
