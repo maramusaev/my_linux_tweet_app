@@ -46,9 +46,10 @@ jobs:
         env: 
           IMAGE_NAME: linux_tweet_app
           PROJECT_ID: service-project-ardhan-1
+        #tag docker image to gcr image format then push to gcr
         run: |-
-          docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest #tag docker image to gcr image format
-          docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest #push to gcr repository
+          docker tag $IMAGE_NAME:latest gcr.io/$PROJECT_ID/$IMAGE_NAME:latest 
+          docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest 
           
       - name: Extract metadata (tags, labels) for Docker GHCR
         env:
